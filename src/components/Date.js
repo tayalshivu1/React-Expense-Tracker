@@ -20,8 +20,8 @@ export default function Date(props) {
 
   return (
     <div className="date-container">
-      <div className="month">{dateMap.get(props.date.getMonth())}</div>
-      <div className="year">{props.date.getFullYear() + 1}</div>
+      <div className="month">{dateMap.get(props.date.getMonth() + 1)}</div>
+      <div className="year">{props.date.getFullYear()}</div>
       <div className="date">{props.date.getDate()}</div>
     </div>
   );

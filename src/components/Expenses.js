@@ -17,17 +17,24 @@ export default function Expenses(props) {
     );
   });
 
+  const expensesShowsData =
+    filteredExpenses.length === 0 ? (
+      <p className="no-expense-check">No Expenses!</p>
+    ) : (
+      <Card>
+        {filteredExpenses.map((expense) => (
+          <ExpenseItem key={expense.id} expense={expense} />
+        ))}
+      </Card>
+    );
+
   return (
     <div className="expenses">
       <ExpenseFilter
         selected={selectedFilter}
         onFilterChange={filterChangeHandler}
       />
-      <Card>
-        {filteredExpenses.map((expense) => (
-          <ExpenseItem key={expense.id} expense={expense} />
-        ))}
-      </Card>
+      {expensesShowsData}
     </div>
   );
 }
