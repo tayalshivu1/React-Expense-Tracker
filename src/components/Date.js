@@ -13,7 +13,7 @@ export default function Date(props) {
     [9, "September"],
     [10, "October"],
     [11, "November"],
-    [12, "December"]
+    [12, "December"],
   ]);
 
   // const month = props.date.toLocaleString("en-US", { month: "long" });
