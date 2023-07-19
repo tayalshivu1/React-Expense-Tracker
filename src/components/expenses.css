@@ -5,3 +5,11 @@
   width: 50rem;
   max-width: 95%;
 }
+
+.no-expense-check {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
